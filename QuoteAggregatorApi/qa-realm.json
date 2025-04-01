@@ -1,0 +1,53 @@
+{
+  "id": "qa-realm",
+  "realm": "QA",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "qafeclient",
+      "enabled": true,
+      "directAccessGrantsEnabled": true,
+      "publicClient": true,
+      "redirectUris": [
+        "http://localhost:5173/*"
+      ],
+      "webOrigins": [
+        "http://localhost:5173"
+      ],
+      "adminUrl": "http://localhost:5173/",
+      "rootUrl": "http://localhost:5173/"
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "description": "Administrator role with full permissions"
+      }
+    ]
+  },
+  "users": [
+    {
+      "username": "admin",
+      "firstName": "admin",
+      "lastName": "admin",
+      "enabled": true,
+      "credentials": [
+        { "type": "password", "value": "admin" }
+      ],
+      "email": "user1@example.com",
+      "realmRoles": ["admin"]
+    },
+    {
+      "username": "user",
+      "lastName": "user",
+      "firstName": "user",
+      "enabled": true,
+      "credentials": [
+        { "type": "password", "value": "password" }
+      ],
+      "email": "user2@example.com",
+      "realmRoles": []
+    }
+  ]
+}
